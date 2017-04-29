@@ -73,7 +73,11 @@ router.post('/forest/', function(req, res, next) {
             json: {'file_name':pathString,'target':'learning_label'}
         }, function(err, httpResponse, body) {
             if (err) {} else {
-              res.json(body);
+              res.render('home/download', {
+                  layout: 'layout/common.layout.ejs',
+                  title: 'Tambah konten',
+                  data: body
+              });
             }
         })
     });
