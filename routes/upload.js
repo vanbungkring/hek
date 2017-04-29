@@ -64,10 +64,11 @@ router.post('/forest/', function(req, res, next) {
         var csvData = [];
         var path = ("./public/source/csv_" + batch + '.csv');
         var pathString = paths.resolve(__dirname, '../public/source/','csv_'+batch + '.csv');
+
         var url = 'http://nucare.zispro.co:5006/fort/log';
         request.post({
             url: url,
-            json: {'data':pathString,'target':'learning_label'}
+            json: {'file_name':pathString,'target':'learning_label'}
         }, function(err, httpResponse, body) {
             if (err) {} else {
               res.json(body);
