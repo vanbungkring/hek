@@ -37,14 +37,38 @@
               <option value="get_uniq_and_missing_values">GET UNIQ AND MISSING VALUE</option>
             </select>
               </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="panel panel-default">
+          <div class="panel-heading font-bold">Horizontal form</div>
+          <div class="panel-body">
+            <input type="file" name="csvFile" id="file" class="box__file" data-multiple-caption="{count} files selected" multiple />
+          </div>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <button type="submit" class="btn btn-primary">Save changes</button></div>
+    </div>
+  </form>
+  </div>
+
+  <div class="wrapper-md" ng-controller="FormDemoCtrl">
+    <form method="POST" action="/upload/forest" enctype="multipart/form-data">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="panel panel-default">
+          <div class="panel-heading font-bold">Basic form</div>
+          <div class="panel-body">
+            <form role="form">
               <div class="form-group">
-                <label>Method 2</label>
-                <select name="method2" class="form-control m-b">
-                  <option value="rm_summary">RM SUMMARY</option>
-                  <option value="get_uniq_and_missing_values">GET UNIQ AND MISSING VALUE</option>
-              </select>
+                <label>Method 1</label>
+                <select name="method1" class="form-control m-b">
+              <option value="fort/rforest">LOGISTIC REGRESSION</option>
+            </select>
               </div>
-            </form>
+
           </div>
         </div>
       </div>
