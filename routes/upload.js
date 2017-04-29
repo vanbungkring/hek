@@ -66,6 +66,8 @@ router.post('/forest/', function(req, res, next) {
         var pathString = paths.resolve(__dirname, '../public/source/','csv_'+batch + '.csv');
 
         var url = 'http://nucare.zispro.co:5006/fort/log';
+        var data =  {'file_name':pathString,'target':'learning_label'};
+        console.log(data);
         request.post({
             url: url,
             json: {'file_name':pathString,'target':'learning_label'}
